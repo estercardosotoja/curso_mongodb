@@ -1,0 +1,30 @@
+use pessoasData
+
+use carros
+
+db.pessoas.insertMany([
+    {nome:'Joao', idade:40, profissao:'Arquiteto', esta_empregado:false},
+    {nome:'Maria', idade:23, profissao:'Logista', esta_empregado:true}
+    ])
+
+db.pessoas.find()
+
+db.pessoas.find().pretty()
+
+db.pessoas.find({ empregado: true})
+
+db.pessoas.find({ empregado: true}).count()
+
+db.pessoas.findOne()
+
+db.pessoas.findOne({nome:"Joao"}
+
+db.pessoas.updateOne({nome:"João"}, { $set: esta_empregado: true})
+
+db.pessoas.updateMany({
+    { }, {$set: {salario: 5000}
+    })
+
+db.deleteOne({ nome:"Josias"})
+
+db.deleteMany({ nome:"Josias"})
